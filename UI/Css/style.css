@@ -1,0 +1,9 @@
+.Application-Header {
+  text-align: center;
+}
+/* Login card styling */
+.login-card {
+  padding: 15px;
+  margin: 10px;
+  border-radius: 10%;
+}
