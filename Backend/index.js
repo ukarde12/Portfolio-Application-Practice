@@ -1,12 +1,22 @@
 const http = require('http');
 const express = require('express')
-const fs = require('fs');
-var GeneralUIpath = '../UI/';
+const bodyParser  = require('body-parser');
+const constants = require('./userDefinedConstants');
+
+var GeneralUIpath = constants.GENERAL_UI_PATH;
 
 var app = express();
 
-
+/**
+ * Middleware function to get all the static content
+ */
 app.use(express.static(GeneralUIpath))
+
+/**
+ * Middleware function
+ */
+app.use(express.urlencoded({ extended: true }))
+
 /**
  * Express way of calling static pages
  */
@@ -14,11 +24,18 @@ app.get('/',(req,res)=>{
     res.sendFile('index.html',{root : GeneralUIpath})
 });
 
+app.get('/login-Details',(req,res)=>{
+    let username = req.query.username;
+    let password = req.query.userPassword;
+    console.log('Password is ',password);
+    res.send({'username':username , 'password':password});
+})
+
 /**
  * Server listening to 3000 port
  */
 app.listen(3000,(req,res)=>{
-    console.log("Server is starting");
+    console.log("Server is Started");
 })
 
 
