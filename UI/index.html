@@ -13,17 +13,19 @@
     <h1 class="Application-Header">Portfolio Application</h1>
     <div class="row">
         <div class="col-md-4 col-lg-4 mx-auto">
-            <div class="container">
-                <div class="login-content">
-                    <div class="login-card card">
-                        <label for="userName" class="form-label">UserName</label>
-                        <input type="text" name="username" id="UserName">
-                        <label for="password" class="form-label">password</label>
-                        <input type="password" name="UserPassword" id="userPassword">
-                        <button type="button" class="btn btn-primary mt-3">Login</button>
+                <div class="container">
+                    <form action="/login-Details" method="get">
+                    <div class="login-content">
+                        <div class="login-card card">
+                            <label for="userName" class="form-label">UserName</label>
+                            <input type="text" name="username" id="UserName">
+                            <label for="password" class="form-label">password</label>
+                            <input type="password" name="userPassword" id="userPassword">
+                            <button type="submit" class="btn btn-primary mt-3">Login</button>
+                        </div>
                     </div>
+                </form>
                 </div>
-            </div>
         </div>
     </div>
 </body>
