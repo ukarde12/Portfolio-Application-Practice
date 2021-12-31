@@ -1,21 +1,153 @@
-.Application-Header {
-    text-align: center;
-}
-
-
-/* Login card styling */
-
-.login-card {
-    padding: 15px;
-    margin: 10px;
-    border-radius: 10%;
-}
-
-
-/* Registration card styling */
-
-.registration-card {
-    padding: 15px;
-    margin: 10px;
-    border-radius: 10%;
-}
+    .Application-Header {
+        text-align: center;
+    }
+    /* Login card styling */
+    
+    .login-card {
+        padding: 15px;
+        margin: 10px;
+        border-radius: 10%;
+    }
+    /* Registration card styling */
+    
+    .registration-card {
+        padding: 15px;
+        margin: 10px;
+        border-radius: 10%;
+    }
+    /* Common styling applied to all thr attributes */
+    
+    body {
+        background-color: #f6f5f5;
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    ul {
+        list-style: none;
+    }
+    
+    a {
+        text-decoration: none !important;
+    }
+    
+    section {
+        width: 100%;
+        height: 95vh;
+        background-image: url("../images/background/BackGround.jfif");
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+    
+    nav {
+        align-items: center;
+        height: 60px;
+        background-color: #FFFFFF;
+        box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+        padding: 0px 5%;
+    }
+    
+    nav ul {
+        display: flex;
+    }
+    
+    nav ul li a {
+        margin: 30px;
+        font-family: myriad pro regular;
+        color: #505050;
+        font-size: 15px;
+        font-weight: 700;
+    }
+    
+    .logo {
+        font-weight: 700;
+        font-size: 30px;
+        font-family: RoadTest;
+        color: #000000;
+    }
+    
+    .active {
+        font-weight: bold;
+        color: #2d2a2a;
+    }
+    
+    .text-container p:nth-child(1) {
+        font-family: calibri;
+        font-weight: bold;
+        color: #6d6d6d;
+        font-size: 22px;
+    }
+    
+    .text-container p:nth-child(2) {
+        font-family: calibri;
+        font-weight: bold;
+        color: #1a1a1a;
+        letter-spacing: 1px;
+        font-size: 30px;
+    }
+    
+    .text-container p:nth-child(3) {
+        font-family: myriad pro regular;
+        color: #403e3e;
+        font-size: 20px;
+        line-height: 20px;
+    }
+    
+    .text-container p {
+        line-height: 0px;
+        margin: 45px 0px 25px;
+    }
+    
+    .text-container {
+        position: absolute;
+        left: 13%;
+        top: 42%;
+        transform: translate(-13%, -42%);
+    }
+    
+    .model {
+        height: 460px;
+        position: absolute;
+        bottom: 0px;
+        left: 70%;
+        transform: translateX(-70%);
+    }
+    
+    .about-container {
+        width: 80%;
+        height: 330px;
+        background-color: #FFFFFF;
+        border-radius: 20px;
+        box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+        display: flex;
+        margin: -7% auto -7% auto;
+        position: relative;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    .about-container img {
+        height: 250px;
+    }
+    
+    .about-text p:nth-child(1) {
+        color: #403e3e;
+        font-family: myriad pro;
+        font-weight: bold;
+        font-size: 23px;
+    }
+    
+    .about-text p:nth-child(2) {
+        color: #3e3d3d;
+        font-family: myriad pro;
+        font-weight: bold;
+        font-size: 13px;
+        line-height: 5px;
+    }
+    
+    .about-text p:nth-child(3) .about-text p:nth-child(4) {
+        color: #7e7d7d;
+        font-family: calibri;
+        font-size: 16px;
+    }
