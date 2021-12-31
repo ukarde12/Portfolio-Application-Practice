@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../Js/includeHtml.min.js"></script>
+    <title>Registration</title>
+</head>
+
+<body>
+    <div include-html="../Utility/commonStyleIncluder.html" id="Common_Style_file"></div>
+    <div include-html="../Utility/bootstrapIncluder.html" id="Common_bootstrap_file"></div>
+    <div class="row">
+        <div class="col-md-4 col-lg-4 mx-auto">
+            <div class="container">
+                <div class="registration-card card">
+                    <form action="/registration" method="post">
+                        <label for="">Enter your full name</label>
+                        <div class="d-flex justify-content-between">
+                            <input class="col-md-6 col-lg-6" type="text" name="reg-first-name" id="">
+                            <input class="col-md-6 col-lg-6" type="text" name="reg-last-name" id="">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
