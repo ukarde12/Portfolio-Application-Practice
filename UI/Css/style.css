@@ -8,13 +8,6 @@
             margin: 10px;
             border-radius: 10%;
         }
-        /* Registration card styling */
-        
-        .registration-card {
-            padding: 15px;
-            margin: 10px;
-            border-radius: 10%;
-        }
         /* Common styling applied to all thr attributes */
         
         body {
@@ -266,4 +259,39 @@
             outline: none;
             border-radius: 5px;
             margin-bottom: 15px;
+        }
+        /* This section is for styling of registration form */
+        /* Registration card styling */
+        
+        .registration-card {
+            padding: 15px;
+            border-radius: 10%;
+            /* width: 600px; */
+            margin-top: 10px;
+            background-image: url(../images/background/BackGround.jfif);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .registration-card label {
+            margin-bottom: 0.5rem;
+        }
+        
+        #reg-background-logo {
+            /* background-image: url(../images/background/BackGround.jfif); */
+            font-weight: bold;
+            font-family: "Copperplate", Fantasy;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+        }
+        
+        .reg-fit-image {
+            width: 100%;
+            height: auto;
+        }
+        
+        .reg-buttons button {
+            width: 100px;
         }

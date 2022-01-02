@@ -14,16 +14,69 @@
     <div include-html="../Utility/commonStyleIncluder.html" id="Common_Style_file"></div>
     <div include-html="../Utility/bootstrapIncluder.html" id="Common_bootstrap_file"></div>
     <div class="row">
-        <div class="col-md-4 col-lg-4 mx-auto">
+        <div class="col-md-10 col-lg-10 mx-auto">
             <div class="container">
                 <div class="registration-card card">
-                    <form action="/registration" method="post">
-                        <label for="">Enter your full name</label>
-                        <div class="d-flex justify-content-between">
-                            <input class="col-md-6 col-lg-6" type="text" name="reg-first-name" id="">
-                            <input class="col-md-6 col-lg-6" type="text" name="reg-last-name" id="">
+                    <div class="row">
+                        <div class="col-md-5 col-lg-5">
+                            <img src="../images/background/Engineer-stand-photo.jpg" class="img-responsive reg-fit-image" alt=" ">
                         </div>
-                    </form>
+                        <div class="col-md-7 col-lg-7 ">
+                            <div class="logo " id="reg-background-logo">
+                                Portfolio
+                            </div>
+                            <form action="/registration " method="post ">
+                                <!-- Full name of user -->
+                                <label for="User-Full-Name ">Enter your full name</label>
+                                <div class="d-flex ">
+                                    <div class="form-floating mb-2 ">
+                                        <input class=" form-control " type="text " id="floating-User-First-Name " placeholder="First Name " name="reg-first-name ">
+                                        <label for="floating-User-First-Name ">First Name</label>
+                                    </div>
+                                    <div class="form-floating mb-2 ">
+                                        <input class="form-control ms-2" type="text " id="floating-User-Last-Name " placeholder="Last Name " name="reg-last-name">
+                                        <label class="ms-2" for=" floating-User-Last-Name ">Last Name</label>
+                                    </div>
+                                </div>
+                                <!-- Enter email address -->
+                                <label class="form-label " for="User-Full-email-address ">Enter your email Address</label>
+                                <div class="form-floating mb-2 ">
+                                    <input class="form-control " type="email " id="floating-User-email-Id " placeholder="email Address " name="reg-email-id ">
+                                    <label for="floating-User-email-Id "> Email Address </label>
+                                </div>
+                                <!-- Enter designation -->
+                                <label class="form-label " for="User-designation ">Enter  Designation</label>
+                                <div class="form-floating mb-2 ">
+                                    <input class="form-control " type="text " id="floating-User-designation " placeholder="email Address " name="reg-user-designation ">
+                                    <label for="floating-User-designation "> Designation </label>
+                                </div>
+                                <!-- Enter About Me -->
+                                <label class="form-label " for="User-about-Me ">About Me</label>
+                                <div class="form-floating mb-2 ">
+                                    <textarea class="form-control " name=" " id="floating-about-me " cols="30 " rows="10 "></textarea>
+                                    <label for="floating-about-me ">About Me</label>
+                                </div>
+                                <!-- User password -->
+                                <label class="form-label " for="User-password ">Password</label>
+                                <div class="form-floating mb-2 ">
+                                    <input class="form-control " type="password" id="floating-User-password " placeholder="password " name="reg-user-password ">
+                                    <label for="floating-User-password ">Password</label>
+                                </div>
+                                <!-- User Confirmation password -->
+                                <label class="form-label " for="User-Confirm-password ">Confirm Password</label>
+                                <div class="form-floating mb-2 ">
+                                    <input class="form-control " type="password" id="floating-User-confirm-password " placeholder=" confirm password " name="reg-user-confirm-password ">
+                                    <label for="floating-User-confirm-password "> Confirm Password</label>
+                                </div>
+                                <!-- These are Close and Next Buttons  -->
+                                <div class="d-flex justify-content-center reg-buttons">
+                                    <button class="btn btn-dark " id="close-btn">Close</button>
+                                    <button class="btn btn-dark ms-1" id="next-btn">Next</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
