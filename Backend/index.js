@@ -3,6 +3,8 @@ const express = require('express')
 const bodyParser = require('body-parser');
 const constants = require('./userDefinedConstants');
 
+const authRoute = require('./routes/authRoutes')
+
 var GeneralUIpath = constants.GENERAL_UI_PATH;
 var testPortfolioPath = constants.PORTFOLIO_TEST_PATH;
 
@@ -18,12 +20,13 @@ app.use(express.static(testPortfolioPath))
      */
 app.use(express.urlencoded({ extended: true }))
 
+
+/** routes for login and registration */
+app.use(authRoute);
+
 /**
  * Express way of calling static pages
  */
-app.get('/', (req, res) => {
-    res.sendFile('index.html', { root: GeneralUIpath })
-});
 
 app.get('/login-Details', (req, res) => {
     let username = req.query.username;
@@ -47,24 +50,4 @@ app.get("/portfolio", (req, res) => {
  */
 app.listen(3000, (req, res) => {
     console.log("Server is Started");
-})
-
-
-
-
-
-
-
-
-
-
-// var server = http.createServer((req,res)=>{
-//     console.log('Create Server method starts');
-//     console.log('Dir name',__dirname);
-//     res.writeHead(200, {'content-type':'text/html'});
-//     var myReadStream = fs.createReadStream('./' + '../UI/index.html','utf8');
-//     myReadStream.pipe(res);
-// });
-
-// server.listen(3000,'localhost');
-// console.log('Server is Starting');
+});
