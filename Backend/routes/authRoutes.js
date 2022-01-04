@@ -11,9 +11,9 @@ route.get('/login', authController.login_get)
 route.get('/signup', authController.registration_get)
 
 /**Route For user authorization */
-route.post('/login', () => {})
+route.post('/login', authController.login_post)
 
 /**Route For save new user to DB */
-route.post('/signup', () => {})
+route.post('/signup', authController.registration_post)
 
 module.exports = route;
