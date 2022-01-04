@@ -15,14 +15,11 @@ var app = express();
  */
 app.use(express.static(GeneralUIpath))
 app.use(express.static(testPortfolioPath))
+app.use(express.json())
     /**
      * Middleware function
      */
 app.use(express.urlencoded({ extended: true }))
-
-
-/** routes for login and registration */
-app.use(authRoute);
 
 /**
  * Express way of calling static pages
@@ -43,6 +40,9 @@ app.get("/portfolio", (req, res) => {
         root: testPortfolioPath
     })
 })
+
+/** routes for login and registration */
+app.use(authRoute);
 
 
 /**
