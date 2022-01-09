@@ -3,7 +3,7 @@ const express = require('express')
 const bodyParser = require('body-parser');
 const constants = require('./userDefinedConstants');
 
-const authRoute = require('./routes/authRoutes')
+const authRoute = require('./routes/authRoutes');
 
 var GeneralUIpath = constants.GENERAL_UI_PATH;
 var testPortfolioPath = constants.PORTFOLIO_TEST_PATH;
@@ -13,8 +13,8 @@ var app = express();
 /**
  * Middleware function to get all the static content
  */
-app.use(express.static(GeneralUIpath))
-app.use(express.static(testPortfolioPath))
+app.use(express.static(GeneralUIpath));
+app.use(express.static(testPortfolioPath));
 app.use(express.json())
     /**
      * Middleware function
@@ -44,10 +44,4 @@ app.get("/portfolio", (req, res) => {
 /** routes for login and registration */
 app.use(authRoute);
 
-
-/**
- * Server listening to 3000 port
- */
-app.listen(3000, (req, res) => {
-    console.log("Server is Started");
-});
+module.exports = app;
