@@ -1,15 +1,53 @@
-const MongoClient = require('mongodb').MongoClient;
+const mongoClient = require('mongodb').MongoClient;
+const mongooseClient = require('mongoose');
+const path = require('path')
+require('dotenv-flow').config();
 
-const DB_URL = process.env.DB_URL;
+const DB_URL = process.env.DB_HOST;
 
-function connect(url) {
-    return MongoClient.connect(url).then(client => client.db())
-}
+/**
+ * (Without Mongoose)
+ * This method is used for database connection with URL given in 
+ * properties file 
+ * During connection - 2 outputs are possible 
+ * 1. Response may having client - if its client the we are trying select any collection & then taking that obj to use further
+ * 2. Response may having err - then we are returning false response
+ * 
+ * @param {*} callback 
+ */
+// module.exports.connectToMongo = function(callback) {
+//     console.log("DB_URL " + DB_URL);
+//     mongooseClient.connect(DB_URL, { useNewUrlParser: true, useUnifiedTopology: true }, (err, client) => {
+//         if (err) {
+//             console.log("1. Inside false callback");
+//             console.log("err is", err);
+//             callback({ success: false })
+//         } else {
+//             console.log("2. Inside true callback");
+//             var databaseObj = client.db("test");
+//             callback({ success: true, databaseObj: databaseObj })
+//         }
+//     })
+// }
 
-module.exports = async function() {
-    let database = await Promise.all([connect(DB_URL)])
 
-    return {
-        local: database[0]
-    }
+/**
+ * (With Mongoose)
+ * This method is used for database connection with URL given in 
+ * properties file 
+ * During connection - 2 outputs are possible 
+ * 1. Response may having client - if its client the we are trying select any collection & then taking that obj to use further
+ * 2. Response may having err - then we are returning false response
+ * 
+ * @param {*} callback 
+ */
+module.exports.connectToMongo = function(callback) {
+    console.log("DB_URL " + DB_URL);
+    mongooseClient.connect(DB_URL, { useNewUrlParser: true, useUnifiedTopology: true }).
+    then(dbClient => {
+        callback({ success: true, databaseObj: dbClient });
+    }).catch(err => {
+        console.log(err);
+        callback({ success: false, databaseObj: err });
+    })
 }
