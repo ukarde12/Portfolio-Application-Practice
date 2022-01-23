@@ -44,20 +44,4 @@ app.get("/portfolio", (req, res) => {
 /** routes for login and registration */
 app.use(authRoute);
 
-
-
-/**
- * This method is used for storing mongoDB client to global variable so that we can use that connection everywhere
- */
-dbClient.connectToMongo((connectResponse) => {
-    if (connectResponse.success) {
-        console.log("Connection Successful with Mongo");
-        global.dbClient = connectResponse.databaseObj;
-    } else {
-        console.log("Error while connecting to DB " + connectResponse.databaseObj);
-
-    }
-
-})
-
 module.exports = app;
